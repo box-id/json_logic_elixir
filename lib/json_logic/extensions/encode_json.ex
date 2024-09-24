@@ -2,6 +2,7 @@ defmodule JsonLogic.Extensions.EncodeJson do
   @moduledoc """
   This module provides the `encode_json` and `encode_json_obj` operation for JsonLogic.
   They are used to encode a lists to a json string. Depending on which operation is used, the output will be either a json array or a json object.
+  The obj module must be included to use this extension.
 
   ## Examples encode json
 
@@ -45,9 +46,7 @@ defmodule JsonLogic.Extensions.EncodeJson do
         |> Jason.encode!()
       end
 
-
       def operation_encode_json_obj(args, data) when is_list(args) do
-
         %{"obj" => args}
         |> __MODULE__.apply(data)
         |> Jason.encode!()

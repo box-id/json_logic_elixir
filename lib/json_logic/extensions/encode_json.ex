@@ -48,8 +48,7 @@ defmodule JsonLogic.Extensions.EncodeJson do
 
       def operation_encode_json_obj(args, data) when is_list(args) do
 
-        args = %{"obj" => args}
-        args
+        %{"obj" => args}
         |> __MODULE__.apply(data)
         |> Jason.encode!()
       end

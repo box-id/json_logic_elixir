@@ -40,13 +40,13 @@ defmodule JsonLogic.Extensions.EncodeJson do
     quote do
       require Logger
 
-      def operation_encode_json(args, data) when is_list(args) do
+      def operation_encode_json(args, data) do
         args
         |> __MODULE__.apply(data)
         |> Jason.encode!()
       end
 
-      def operation_encode_json_obj(args, data) when is_list(args) do
+      def operation_encode_json_obj(args, data) do
         %{"obj" => args}
         |> __MODULE__.apply(data)
         |> Jason.encode!()

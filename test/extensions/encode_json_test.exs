@@ -55,6 +55,37 @@ defmodule Extension.EncodeJsonTest do
                  %{"sub_object" => %{"key1" => "foo"}}
                )
     end
+
+    test "builds json with number" do
+      assert "42" ==
+               Logic.apply(%{
+                 "encode_json" => 42
+               })
+    end
+
+    test "builds json with string" do
+      assert "\"foo\"" ==
+               Logic.apply(%{
+                 "encode_json" => "foo"
+               })
+    end
+
+    test "builds json with null" do
+      assert "null" ==
+               Logic.apply(%{
+                 "encode_json" => nil
+               })
+    end
+
+    test "builds json object from resolved data" do
+      assert "{\"key1\":\"foo\"}" ==
+               Logic.apply(
+                 %{
+                   "encode_json" => %{"var" => "sub_object"}
+                 },
+                 %{"sub_object" => %{"key1" => "foo"}}
+               )
+    end
   end
 
   describe "operation encode json obj" do
@@ -96,6 +127,16 @@ defmodule Extension.EncodeJsonTest do
                      %{"var" => "sub_object"},
                      ["key2", "bar"]
                    ]
+                 },
+                 %{"sub_object" => %{"key1" => "foo"}}
+               )
+    end
+
+    test "builds json object from resolved data" do
+      assert "{\"key1\":\"foo\"}" ==
+               Logic.apply(
+                 %{
+                   "encode_json_obj" => %{"var" => "sub_object"}
                  },
                  %{"sub_object" => %{"key1" => "foo"}}
                )

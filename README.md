@@ -62,3 +62,13 @@ defmodule MyApp.JsonLogic do
 Extensions can bring one or multiple operators. Using extensions is compatible with custom operators.
 
 See the [JsonLogic.Extension](lib/json_logic/extension.ex) for how to implement an extension.
+
+### Included Extensions
+
+The following extensions are available, **but not enabled by default**:
+
+| Operators                        | Extension Module                  |
+| -------------------------------- | --------------------------------- |
+| `obj`                            | `JsonLogic.Extensions.Obj`        |
+| `replace`                        | `JsonLogic.Extensions.Replace`    |
+| `encode_json`, `encode_json_obj` | `JsonLogic.Extensions.EncodeJson` |

@@ -9,6 +9,11 @@ defmodule JsonLogic.Extensions.ArrayRemove do
   If either argument is not an array, it will be converted to a single-item array.
   If the source array is nil, an empty array will be returned.
 
+  ## Why use array_remove?
+  While removing elements could theoretically be accomplished using array operations like "filter",
+  the execution context within a "filter" prevents the use of dynamic variables. This makes it
+  impossible to reference external variables for the items to be removed.
+
   ## Examples
 
       iex> Logic.apply(%{

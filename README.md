@@ -67,8 +67,9 @@ See the [JsonLogic.Extension](lib/json_logic/extension.ex) for how to implement 
 
 The following extensions are available, **but not enabled by default**:
 
-| Operators                        | Extension Module                  |
-| -------------------------------- | --------------------------------- |
-| `obj`                            | `JsonLogic.Extensions.Obj`        |
-| `replace`                        | `JsonLogic.Extensions.Replace`    |
-| `encode_json`, `encode_json_obj` | `JsonLogic.Extensions.EncodeJson` |
+| Operators                        | Extension Module                   |
+| -------------------------------- | ---------------------------------- |
+| `obj`                            | `JsonLogic.Extensions.Obj`         |
+| `replace`                        | `JsonLogic.Extensions.Replace`     |
+| `array_remove`                   | `JsonLogic.Extensions.ArrayRemove` |
+| `encode_json`, `encode_json_obj` | `JsonLogic.Extensions.EncodeJson`  |

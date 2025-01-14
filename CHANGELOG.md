@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2025-01-09
+
+### Added
+
+- Extension `array_remove`
+
 ## [1.2.0] - 2024-11-11
 
 ### Added
@@ -32,7 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for extension modules
 - Extension for building objects - `obj`
 
-[unreleased]: https://github.com/box-id/json_logic_elixir/compare/1.2.0...HEAD
+[unreleased]: https://github.com/box-id/json_logic_elixir/compare/1.2.1...HEAD
+[1.2.1]: https://github.com/box-id/json_logic_elixir/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/box-id/json_logic_elixir/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/box-id/json_logic_elixir/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/box-id/json_logic_elixir/compare/1.0.0...1.0.1
